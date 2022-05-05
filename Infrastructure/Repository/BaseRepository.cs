@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Domain.Entities;
+using Domain.Interfaces;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,12 +13,14 @@ namespace Infrastructure.Repository
 {
     public class BaseRepository : IWeatherModel
     {
-        static string APIKey = "fb559a98a6a1dc5e73131299c9b50f08";
+
+
+        static string Api = "93e1d37e90618f18031fa2e07f14be47";
 
 
 
 
-        public DateTime En_tiempo(long g)
+        public DateTime Tiempo(long g)
         {
             {
                 DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).ToLocalTime();
@@ -33,17 +38,17 @@ return day;
                 using (WebClient web = new WebClient())
                 {
 
-                    string url1 = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", t, APIKey);
+                    string url1 = string.Format("https://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}", t, Api);
                     var json1 = web.DownloadString(url1);
 
-                    City ciudades = JsonConvert.DeserializeObject<City>(json1);
+                    Ciudad ciudades = JsonConvert.DeserializeObject<Ciudad>(json1);
 
-                    DateTime a = En_tiempo((long)ciudades.Dt);
+                    DateTime a = Tiempo((long)ciudades.Dt);
                     a.AddDays(-5);
                     long DT = a.Ticks;
 
 
-                    string url2 = string.Format("http://api.openweathermap.org/data/2.5/onecall/timemachine?lat={0}&lon={1}&units=metric&dt={2}&lang=sp&appid={3}", ciudades.coord.Lat, ciudades.coord.Lon, DT, APIKey);
+                    string url2 = string.Format("http://api.openweathermap.org/data/2.5/onecall/timemachine?lat={0}&lon={1}&units=metric&dt={2}&lang=sp&appid={3}", ciudades.coord.Lat, ciudades.coord.Lon, DT, Api);
                     var json2 = web.DownloadString(url2);
 Clima datos = JsonConvert.DeserializeObject<Clima>(json2);
 return datos;

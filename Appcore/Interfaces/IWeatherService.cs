@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.Interfaces
+namespace Appcore.Interfaces
 {
-
-    public interface IWeatherModel : IModel<Clima>
+    public interface IWeatherService : IService<Clima>
     {
+
         DateTime Tiempo(long g);
     }
 }
