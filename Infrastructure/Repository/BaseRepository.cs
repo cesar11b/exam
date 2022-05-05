@@ -14,15 +14,15 @@ namespace Infrastructure.Repository
 {
     public class BaseRepository : IWeatherModel
     {
-        static string APIKey = "fb559a98a6a1dc5e73131299c9b50f08";
+        static string APIKey = "93e1d37e90618f18031fa2e07f14be47";
 
 
 
-        public DateTime Tiempo(long g)
+        public DateTime Tiempo(long a)
         {
             {
                 DateTime day = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc).ToLocalTime();
-                day = day.AddSeconds(g).ToLocalTime();
+                day = day.AddSeconds(a).ToLocalTime();
 
                 return day;
             }

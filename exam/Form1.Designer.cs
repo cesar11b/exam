@@ -55,7 +55,7 @@ namespace exam
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(627, 20);
+            this.btnAceptar.Location = new System.Drawing.Point(613, 19);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 2;
