@@ -59,15 +59,14 @@ namespace exam
 
             if (txtCity.Text == string.Empty || txtCity == null)
             {
-                MessageBox.Show("debe escribir una ciudad");
+                MessageBox.Show("Debe escribir una ciudad valida");
                 return;
 
             }
             
             
             Paneles();
-            //climaServices.Add(clima);
-
+            
             txtCity.Text = string.Empty;
 
 

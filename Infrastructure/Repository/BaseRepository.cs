@@ -63,7 +63,7 @@ namespace Infrastructure.Repository
             }
         }
         private RAFContext context;
-        private int SIZE = 9000;
+        private int SIZE = 1000;
 
         public BaseRepository()
         {
