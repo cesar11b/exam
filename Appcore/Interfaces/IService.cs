@@ -9,7 +9,9 @@ namespace Appcore.Interfaces
     public interface IService<T>
     {
         T Extracción(string t);
+        void Add(T t);
 
+        List<T> Read();
 
     }
 }

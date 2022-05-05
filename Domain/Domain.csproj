@@ -50,6 +50,7 @@
     <Compile Include="Interfaces\IModel.cs" />
     <Compile Include="Interfaces\IWeatherModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubModel\ClimaSubModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

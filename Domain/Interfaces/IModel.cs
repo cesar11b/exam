@@ -10,6 +10,8 @@ namespace Domain.Interfaces
     {
 
         T Extraccion(string t);
+        void Add(T t);
 
+        List<T> Read();
     }
 }

@@ -16,9 +16,20 @@ namespace Appcore.Services
             this.Model = model;
         }
 
+        public void Add(T t)
+        {
+            Model.Add(t);
+        }
+
         public T Extracción(string t)
         {
             return Model.Extraccion(t);
         }
+
+        public List<T> Read()
+        {
+            return Model.Read();
+        }
     }
 }
+
