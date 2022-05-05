@@ -4,9 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Appcore
+namespace Domain.Interfaces
 {
-    public class Class1
+    public interface IModel<T>
     {
+
+        T Extraccion(string t);
+
     }
 }
