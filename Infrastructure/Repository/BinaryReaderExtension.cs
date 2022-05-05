@@ -9,7 +9,6 @@ namespace Infrastructure.Repository
 {
     public static class BinaryReaderExtension
     {
-        //TODO avoid T and try to replace TypeCode by type
         public static object GetValue<T>(this BinaryReader br, TypeCode typeCode)
         {
             switch (typeCode)

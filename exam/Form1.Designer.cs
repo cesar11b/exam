@@ -36,7 +36,7 @@ namespace exam
             // 
             // txtcity
             // 
-            this.txtcity.Location = new System.Drawing.Point(71, 28);
+            this.txtcity.Location = new System.Drawing.Point(91, 16);
             this.txtcity.Name = "txtcity";
             this.txtcity.Size = new System.Drawing.Size(255, 20);
             this.txtcity.TabIndex = 0;
@@ -44,7 +44,7 @@ namespace exam
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 28);
+            this.label1.Location = new System.Drawing.Point(32, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 1;
@@ -52,7 +52,7 @@ namespace exam
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(609, 24);
+            this.btnAceptar.Location = new System.Drawing.Point(629, 12);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 2;

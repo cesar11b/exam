@@ -55,7 +55,7 @@ namespace Infrastructure.Repository
                             k = brHeader.ReadInt32();
                         }
 
-                        //calculamos la posicion en Data
+                        
                         long pos = k * size;
                         bwData.BaseStream.Seek(pos, SeekOrigin.Begin);
 
@@ -150,7 +150,7 @@ namespace Infrastructure.Repository
                         {
                             return;
                         }
-                        //calculamos la posicion en Data
+                     
                         long pos = (Id - 1) * size;
                         bwData.BaseStream.Seek(pos, SeekOrigin.Begin);
 
@@ -239,10 +239,10 @@ namespace Infrastructure.Repository
 
                     PropertyInfo[] properties = newValue.GetType().GetProperties();
                     long posh = 8 + (id) * 4;
-                    //TODO Add Binary search to find the id
+                  
                     brHeader.BaseStream.Seek(posh, SeekOrigin.Begin);
                     int index = brHeader.ReadInt32();
-                    //TODO VALIDATE INDEX
+                
                     long posd = (index - 1) * size;
                     brData.BaseStream.Seek(posd, SeekOrigin.Begin);
                     foreach (PropertyInfo pinfo in properties)
@@ -444,13 +444,13 @@ namespace Infrastructure.Repository
                             if (HDtemp[count] != Id)
                             {
                                 NumDelete = HDtemp[count];
-                                //Console.WriteLine(HDtemp[count]);
+                            
                                 bwTemp.Write(HDtemp[count]);
 
                             }
                             count++;
                         }
-                        //Console.WriteLine($"Este es el n ---> {n - 1}");
+                       
 
 
 
