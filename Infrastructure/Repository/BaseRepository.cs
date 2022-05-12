@@ -15,7 +15,7 @@ namespace Infrastructure.Repository
     public class BaseRepository : IWeatherModel
     {
         static string APIKey = "93e1d37e90618f18031fa2e07f14be47";
-
+//https://www.pinterest.com/pin/807270301938104248/
 
 
         public DateTime Tiempo(long a)
